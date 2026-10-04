@@ -1,26 +1,35 @@
+import Countdown from "@/components/Countdown";
+
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#050505] text-white">
-      <div className="mx-auto flex min-h-screen max-w-7xl flex-col px-6 py-8 md:px-10">
-        <header className="flex items-center justify-between border-b border-white/10 pb-6">
+    <main className="min-h-screen bg-[#050308] text-white">
+      <div className="relative mx-auto flex min-h-screen max-w-7xl flex-col overflow-hidden px-6 py-8 md:px-10">
+        {/* Glow de fundo */}
+        <div className="pointer-events-none absolute left-[-150px] top-[200px] h-[500px] w-[500px] rounded-full bg-[#ff2bd6]/10 blur-[140px]" />
+        <div className="pointer-events-none absolute right-[-200px] top-[100px] h-[450px] w-[450px] rounded-full bg-[#8b5cf6]/10 blur-[140px]" />
+
+        <header className="relative z-10 flex items-center justify-between border-b border-white/10 pb-6">
           <div className="text-xl font-bold tracking-tight">
-            Level<span className="text-lime-400">Route</span>
+            Level
+            <span className="text-[#ff2bd6]">
+              Route
+            </span>
           </div>
 
-          <div className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/50">
+          <div className="rounded-full border border-[#ff2bd6]/20 bg-[#ff2bd6]/5 px-3 py-1 text-xs text-[#ff7ce8]">
             BUILD 0.0.1
           </div>
         </header>
 
-        <section className="flex flex-1 items-center py-20">
+        <section className="relative z-10 flex flex-1 items-center py-20">
           <div className="max-w-4xl">
-            <div className="mb-6 inline-flex rounded-full border border-lime-400/20 bg-lime-400/10 px-4 py-2 text-sm font-medium text-lime-300">
+            <div className="mb-6 inline-flex rounded-full border border-[#ff2bd6]/30 bg-[#ff2bd6]/10 px-4 py-2 text-sm font-medium text-[#ff75e6] shadow-[0_0_30px_rgba(255,43,214,0.08)]">
               GTA VI • HUB EM CONSTRUÇÃO
             </div>
 
             <h1 className="max-w-4xl text-5xl font-black leading-[0.95] tracking-[-0.04em] md:text-7xl lg:text-8xl">
               Seu mapa para o
-              <span className="block text-white/40">
+              <span className="block bg-gradient-to-r from-[#ff2bd6] via-[#ff65df] to-[#9b6cff] bg-clip-text text-transparent">
                 próximo grande mundo.
               </span>
             </h1>
@@ -31,18 +40,20 @@ export default function Home() {
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
-              <button className="rounded-xl bg-lime-400 px-6 py-3 font-bold text-black transition hover:bg-lime-300">
+              <button className="rounded-xl bg-[#ff2bd6] px-6 py-3 font-bold text-black shadow-[0_0_30px_rgba(255,43,214,0.25)] transition hover:bg-[#ff65df] hover:shadow-[0_0_40px_rgba(255,43,214,0.4)]">
                 Explorar GTA VI
               </button>
 
-              <button className="rounded-xl border border-white/10 bg-white/5 px-6 py-3 font-medium text-white/70 transition hover:bg-white/10">
+              <button className="rounded-xl border border-white/10 bg-white/5 px-6 py-3 font-medium text-white/70 transition hover:border-[#ff2bd6]/30 hover:bg-[#ff2bd6]/5 hover:text-white">
                 Em breve
               </button>
             </div>
+
+            <Countdown />
           </div>
         </section>
 
-        <footer className="border-t border-white/10 pt-6 text-sm text-white/30">
+        <footer className="relative z-10 border-t border-white/10 pt-6 text-sm text-white/30">
           LevelRoute — Built for players.
         </footer>
       </div>
