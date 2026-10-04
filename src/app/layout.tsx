@@ -40,6 +40,10 @@ export const metadata: Metadata = {
     canonical: "/",
   },
 
+  verification: {
+    google: "fABU0lYtXW2fNhaPm7G1UuB_FfC0AlJ6tgTFEkml85Q",
+  },
+
   openGraph: {
     title: "LevelRoute — GTA VI Intelligence Hub",
     description:
