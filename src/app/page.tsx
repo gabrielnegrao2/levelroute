@@ -1,11 +1,13 @@
 import Countdown from "@/components/Countdown";
+import GtaHub from "@/components/GtaHub";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#050308] text-white">
-      <div className="relative mx-auto flex min-h-screen max-w-7xl flex-col overflow-hidden px-6 py-8 md:px-10">
+    <main className="min-h-screen scroll-smooth bg-[#050308] text-white">
+      <div className="relative mx-auto max-w-7xl overflow-hidden px-6 py-8 md:px-10">
         {/* Glow de fundo */}
         <div className="pointer-events-none absolute left-[-150px] top-[200px] h-[500px] w-[500px] rounded-full bg-[#ff2bd6]/10 blur-[140px]" />
+
         <div className="pointer-events-none absolute right-[-200px] top-[100px] h-[450px] w-[450px] rounded-full bg-[#8b5cf6]/10 blur-[140px]" />
 
         <header className="relative z-10 flex items-center justify-between border-b border-white/10 pb-6">
@@ -17,11 +19,11 @@ export default function Home() {
           </div>
 
           <div className="rounded-full border border-[#ff2bd6]/20 bg-[#ff2bd6]/5 px-3 py-1 text-xs text-[#ff7ce8]">
-            BUILD 0.0.1
+            BUILD 0.0.2
           </div>
         </header>
 
-        <section className="relative z-10 flex flex-1 items-center py-20">
+        <section className="relative z-10 flex min-h-[820px] items-center py-20">
           <div className="max-w-4xl">
             <div className="mb-6 inline-flex rounded-full border border-[#ff2bd6]/30 bg-[#ff2bd6]/10 px-4 py-2 text-sm font-medium text-[#ff75e6] shadow-[0_0_30px_rgba(255,43,214,0.08)]">
               GTA VI • HUB EM CONSTRUÇÃO
@@ -40,9 +42,12 @@ export default function Home() {
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
-              <button className="rounded-xl bg-[#ff2bd6] px-6 py-3 font-bold text-black shadow-[0_0_30px_rgba(255,43,214,0.25)] transition hover:bg-[#ff65df] hover:shadow-[0_0_40px_rgba(255,43,214,0.4)]">
+              <a
+                href="#gta-hub"
+                className="rounded-xl bg-[#ff2bd6] px-6 py-3 font-bold text-black shadow-[0_0_30px_rgba(255,43,214,0.25)] transition hover:bg-[#ff65df] hover:shadow-[0_0_40px_rgba(255,43,214,0.4)]"
+              >
                 Explorar GTA VI
-              </button>
+              </a>
 
               <button className="rounded-xl border border-white/10 bg-white/5 px-6 py-3 font-medium text-white/70 transition hover:border-[#ff2bd6]/30 hover:bg-[#ff2bd6]/5 hover:text-white">
                 Em breve
@@ -52,6 +57,13 @@ export default function Home() {
             <Countdown />
           </div>
         </section>
+
+        <div
+          id="gta-hub"
+          className="relative z-10 scroll-mt-8"
+        >
+          <GtaHub />
+        </div>
 
         <footer className="relative z-10 border-t border-white/10 pt-6 text-sm text-white/30">
           LevelRoute — Built for players.
